@@ -16,7 +16,22 @@ public:
 
     // comparación lexicográfica entre dos sufijos
     // retorna un valor negativo si este sufijo es menor, cero si son iguales, positivo si es mayor
-    int comparar(const Suffix& otro) const { }
+    int comparar(const Suffix& otro) const {
+        const char* s1 = texto + posicion;
+        const char* s2 = otro.texto + otro.posicion;
+        int i = 0;
+        
+        while (s1[i] != '\0' && s2[i] != '\0') {
+            if (s1[i] != s2[i]) 
+                return s1[i] - s2[i];
+            i++;
+        }
+        
+        // Si uno es prefijo del otro, el más corto es menor
+        if (s1[i] == '\0' && s2[i] == '\0') return 0;
+        if (s1[i] == '\0') return -1;
+        return 1;
+    }
 
     // función para comparar este sufijo con un patrón
     // retorna negativo si sufijo < patrón, 0 si coinciden al inicio, positivo si sufijo > patrón
