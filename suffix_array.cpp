@@ -72,13 +72,35 @@ private:
     int n;             // longitud del texto
 
     // función auxiliar para obtener la longitud de una cadena
-    static int longitudCadena(const char *cadena) {}
+    static int longitudCadena(const char *cadena) {
+         int n = 0;
+        while (cadena[n] != '\0')
+        {n++;}
+    return n;}
 
     // intercambia dos sufijos en el arreglo
-    static void intercambiar(Suffix *arr, int i, int j) {}
+    static void intercambiar(Suffix *arr, int i, int j) {
+    Suffix temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    }
 
     // partición para el quicksort
-    static int particion(Suffix *arr, int inicio, int fin) {}
+    static int particion(Suffix *arr, int inicio, int fin) {
+        Suffix pivote = arr[fin];
+    int i = inicio - 1;
+
+    for (int j = inicio; j <= fin - 1; j++)
+    {
+        if (arr[j].comparar(pivote) <= 0)
+        {
+            i++;
+            intercambiar(arr, i, j);
+        }
+    }
+        intercambiar(arr, i + 1, fin);
+    return i + 1;
+    }
 
     // ordenamiento quicksort para los sufijos
     static void quicksort(Suffix *arr, int inicio, int fin) {}
