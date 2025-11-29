@@ -35,7 +35,15 @@ public:
 
     // función para comparar este sufijo con un patrón
     // retorna negativo si sufijo < patrón, 0 si coinciden al inicio, positivo si sufijo > patrón
-    int compararConPatron(const char* patron) const { }
+    int compararConPatron(const char* patron) const {
+        const char* s = texto + posicion;
+        int i = 0;
+        
+        while (s[i] != '\0' && patron[i] != '\0') {
+            if (s[i] != patron[i])
+                return s[i] - patron[i];
+            i++;
+        }
 };
 
 // clase que implementa el Suffix Array
