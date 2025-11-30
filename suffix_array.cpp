@@ -30,7 +30,7 @@ public:
             i++;
         }
 
-        // Si uno es prefijo del otro, el más corto es menor
+        // si uno es prefijo del otro, el más corto es menor
         if (s1[i] == '\0' && s2[i] == '\0')
             return 0;
         if (s1[i] == '\0')
@@ -51,11 +51,11 @@ public:
                 return s[i] - patron[i];
             i++;
         }
-        // Si se consumió todo el patrón, hay coincidencia
+        // si se consumió todo el patrón, hay coincidencia
         if (patron[i] == '\0')
             return 0;
 
-        // Si el sufijo terminó primero, es menor
+        // si el sufijo terminó primero, es menor
         if (s[i] == '\0')
             return -1;
 
@@ -112,7 +112,25 @@ private:
     }
 
     // construye el suffix array
-    void construir() {}
+    void construir() {
+        // crear arreglo de sufijos
+        Suffix* sufijos = new Suffix[n];
+
+        // inicializar sufijos
+        for (int i = 0; i < n; i++) {
+            sufijos[i] = Suffix(texto, i);
+        }
+
+        // ordenar sufijos
+        quicksort(sufijos, 0, n - 1);
+
+        // guardar las posiciones ordenadas
+        for (int i = 0; i < n; i++) {
+            sa[i] = sufijos[i].getPosicion();
+        }
+
+        delete[] sufijos;
+    }
 
 public:
     // constructor
