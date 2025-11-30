@@ -103,7 +103,13 @@ private:
     }
 
     // ordenamiento quicksort para los sufijos
-    static void quicksort(Suffix *arr, int inicio, int fin) {}
+    static void quicksort(Suffix* arr, int inicio, int fin) {
+        if (inicio < fin) {
+            int p = particion(arr, inicio, fin);
+            quicksort(arr, inicio, p - 1);
+            quicksort(arr, p + 1, fin);
+        }
+    }
 
     // construye el suffix array
     void construir() {}
