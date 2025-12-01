@@ -122,7 +122,30 @@ public:
 
     // busca un patrón en el texto usando búsqueda binaria
     // retorna la posición de la primera ocurrencia o -1 si no se encuentra
-    int buscar(const char *patron) const {}
+    int buscar(const char* patron) const {
+        int izquierda = 0;
+        int derecha = n - 1;
+        
+        while (izquierda <= derecha) {
+            int medio = (izquierda + derecha) / 2;
+            int pos = sa[medio];
+            
+            // Crear un sufijo temporal para la comparación
+            Suffix sufijoTemporal(texto, pos);
+            int comparacion = sufijoTemporal.compararConPatron(patron);
+            
+            if (comparacion == 0) {
+                // Encontrado, devolver la posición
+                return pos;
+            } else if (comparacion < 0) {
+                izquierda = medio + 1;
+            } else {
+                derecha = medio - 1;
+            }
+        }
+        
+        return -1; // No encontrado
+    }
 
     // Imprime el suffix array
     void imprimir() const {
