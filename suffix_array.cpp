@@ -3,7 +3,7 @@ using namespace std;
 
 class Suffix {
     const char *texto; // puntero al texto completo
-    int posicion;      // posición donde comienza este sufijo
+    int posicion; // posición donde comienza este sufijo
 
 public:
     // constructor
@@ -133,33 +133,28 @@ public:
             int medio = (izquierda + derecha) / 2;
             int pos = sa[medio];
             
-            // Crear un sufijo temporal para la comparación
+            // crear un sufijo temporal para la comparación
             Suffix sufijoTemporal(texto, pos);
             int comparacion = sufijoTemporal.compararConPatron(patron);
             
             if (comparacion == 0) {
-                // Encontrado, devolver la posición
-                return pos;
-            } else if (comparacion < 0) {
-                izquierda = medio + 1;
-            } else {
-                derecha = medio - 1;
-            }
-        }
+                // encontrado, devolver la posición
+                return pos; } 
+            else if (comparacion < 0) {
+                izquierda = medio + 1; } 
+            else {
+                derecha = medio - 1; } }
         
-        return -1; // No encontrado
-    }
+        return -1; } // no encontrado
 
-    // Imprime el suffix array
+    // imprime el suffix array
     void imprimir() const {
-        cout << "Suffix Array del texto: " << texto << "\n";
-        cout << "Indice\tSufijo\t\tPosicion original\n";
+        cout << "suffix-array del texto: " << texto << "\n";
+        cout << "índice\tsufijo\t\tposición original\n";
         
         for (int i = 0; i < n; i++) {
             int pos = sa[i];
-            cout << i << "\t" << (texto + pos) << "\t\t" << pos << "\n";
-        }
-    }
+            cout << i << "\t" << (texto + pos) << "\t\t" << pos << "\n"; } }
 
     // obtiene el arreglo de sufijos (para uso avanzado)
     const int* obtenerSuffixArray() const {
@@ -174,17 +169,15 @@ public:
     const char texto[] = "banana";
     const char patron[] = "ana";
 
-
     SuffixArray sa(texto);
 
     sa.imprimir();
 
     int posicion = sa.buscar(patron);
 
-    if (posicion != -1)
-        cout << "\nPatron encontrado en posicion: " << posicion << endl;
-    else
-        cout << "\nPatrón NO encontrado." << endl;
-
-    return 0;
-}
+    if (posicion != -1) {
+        cout << "\npatrón encontrado en posición: " << posicion << endl; }
+    else {
+        cout << "\npatrón NO encontrado" << endl; }
+        
+    return 0; }
