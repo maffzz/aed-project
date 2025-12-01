@@ -169,6 +169,23 @@ public:
 
 int main()
 {
+    int main() {
+    const char texto[] = "banana";
+    const char patron[] = "ana";
+
+  
+    SuffixArray sa(texto);
+
+    sa.imprimir();
+
+    int posicion = sa.buscar(patron);
+
+    if (posicion != -1)
+        cout << "\nPatrón encontrado en posición: " << posicion << endl;
+    else
+        cout << "\nPatrón NO encontrado." << endl;
 
     return 0;
+}
+
 }
