@@ -109,6 +109,7 @@ class SuffixArray {
         delete[] sufijos; }
 
 public:
+ 
     // constructor
     SuffixArray(const char *txt) {
         texto = txt;
