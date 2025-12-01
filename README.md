@@ -1,62 +1,62 @@
-# 📚 aed - hito 2 - proyecto suffix array
+# 📚 AED - HITO 2 - PROYECTO SUFFIX ARRAY
 
-este repositorio corresponde al **hito 2** del curso de aed, donde se implementa y analiza la estructura de datos **suffix array**.
+ESTE REPOSITORIO CORRESPONDE AL **HITO 2** DEL CURSO DE AED, DONDE SE IMPLEMENTA Y ANALIZA LA ESTRUCTURA DE DATOS **SUFFIX ARRAY**.
 
-el trabajo continúa y mantiene la coherencia con el **hito 1** (informe teórico), en el que se presentan:
+EL TRABAJO CONTINÚA Y MANTIENE LA COHERENCIA CON EL **HITO 1** (INFORME TEÓRICO), EN EL QUE SE PRESENTAN:
 
-- 🧩 definiciones formales del suffix array y estructuras relacionadas
-- 📖 motivación y contexto teórico
-- ⚖️ ventajas, desventajas y casos de uso
+- 🧩 DEFINICIONES FORMALES DEL SUFFIX ARRAY Y ESTRUCTURAS RELACIONADAS
+- 📖 MOTIVACIÓN Y CONTEXTO TEÓRICO
+- ⚖️ VENTAJAS, DESVENTAJAS Y CASOS DE USO
 
-## 🔧 contenido principal
+## 🔧 CONTENIDO PRINCIPAL
 
 - `suffix_array.cpp` ⚙️
-  - implementación del suffix array **sin estructuras de la stl** (solo arreglos y funciones propias).
-  - construcción del arreglo de sufijos a partir de un texto.
-  - búsqueda de patrones mediante **búsqueda binaria** sobre el suffix array.
-  - comentarios que explican cómo el código refleja la definición formal y las complejidades mencionadas en el informe del hito 1.
+  - IMPLEMENTACIÓN DEL SUFFIX ARRAY **SIN ESTRUCTURAS DE LA STL** (SOLO ARREGLOS Y FUNCIONES PROPIAS).
+  - CONSTRUCCIÓN DEL ARREGLO DE SUFIJOS A PARTIR DE UN TEXTO.
+  - BÚSQUEDA DE PATRONES MEDIANTE **BÚSQUEDA BINARIA** SOBRE EL SUFFIX ARRAY.
+  - COMENTARIOS QUE EXPLICAN CÓMO EL CÓDIGO REFLEJA LA DEFINICIÓN FORMAL Y LAS COMPLEJIDADES MENCIONADAS EN EL INFORME DEL HITO 1.
 
-- carpeta `web/` 🌐
-  - `index.html`: interfaz visual para **explorar el suffix array** paso a paso.
-  - `style.css`: estilos con estética clara y didáctica.
-  - `app.js`: lógica en javascript que implementa el suffix array y la búsqueda binaria.
+- CARPETA `web/` 🌐
+  - `index.html`: INTERFAZ VISUAL PARA **EXPLORAR EL SUFFIX ARRAY** PASO A PASO.
+  - `style.css`: ESTILOS CON ESTÉTICA CLARA Y DIDÁCTICA.
+  - `app.js`: LÓGICA EN JAVASCRIPT QUE IMPLEMENTA EL SUFFIX ARRAY Y LA BÚSQUEDA BINARIA.
 
-## 🌟 características
+## 🌟 CARACTERÍSTICAS
 
-- 🔡 muestra todos los sufijos y su orden lexicográfico.
-- 📏 visualiza el **suffix array** como una permutación de posiciones.
-- ⏱️ ilustra la búsqueda de patrones con complejidad aproximada **o(m log n)**.
+- 🔡 MUESTRA TODOS LOS SUFIJOS Y SU ORDEN LEXICOGRÁFICO.
+- 📏 VISUALIZA EL **SUFFIX ARRAY** COMO UNA PERMUTACIÓN DE POSICIONES.
+- ⏱️ ILUSTRA LA BÚSQUEDA DE PATRONES CON COMPLEJIDAD APROXIMADA **O(M LOG N)**.
 
-## 👀 visualizador web
+## 👀 VISUALIZADOR WEB
 
-el visualizador permite:
+EL VISUALIZADOR PERMITE:
 
-- ✏️ ingresar un texto (por ejemplo `banana`).
-- 📚 ver todos los sufijos generados y ordenados lexicográficamente.
-- 🧱 observar el suffix array como arreglo de índices.
-- 🔍 seguir paso a paso la **búsqueda binaria** de un patrón.
+- ✏️ INGRESAR UN TEXTO (POR EJEMPLO `BANANA`).
+- 📚 VER TODOS LOS SUFIJOS GENERADOS Y ORDENADOS LEXICOGRÁFICAMENTE.
+- 🧱 OBSERVAR EL SUFFIX ARRAY COMO ARREGLO DE ÍNDICES.
+- 🔍 SEGUIR PASO A PASO LA **BÚSQUEDA BINARIA** DE UN PATRÓN.
 
-## 🚀 despliegue
+## 🚀 DESPLIEGUE
 
-la aplicación está desplegada en github pages:
+LA APLICACIÓN ESTÁ DESPLEGADA EN GITHUB PAGES:
 
-🔗 [ver en vivo](maffzz.github.io/aed-project/)
+🔗 [VER EN VIVO](https://maffzz.github.io/aed-project/)
 
-## 🗂️ estructura del proyecto
+## 🗂️ ESTRUCTURA DEL PROYECTO
 
 ```
 .
-├── suffix_array.cpp   # implementación en c++
-└── web/
-    ├── index.html     # interfaz de usuario
-    ├── style.css      # estilos
-    └── app.js         # lógica de la aplicación
+├── SUFFIX_ARRAY.CPP   # IMPLEMENTACIÓN EN C++
+└── WEB/
+    ├── INDEX.HTML     # INTERFAZ DE USUARIO
+    ├── STYLE.CSS      # ESTILOS
+    └── APP.JS         # LÓGICA DE LA APLICACIÓN
 ```
 
-## ✨ grupo 5
+## ✨ GRUPO 5
 
-| nombre                                   | carrera | perfil de github                              |
+| NOMBRE                                   | CARRERA | PERFIL DE GITHUB                              |
 |------------------------------------------|---------|-----------------------------------------------|
-| martín jesús bonilla sarmiento 🧠        | cs      | [github](https://github.com/marbs23)         |
-| annemarie alejandra saldarriaga núñez 💻 | cs      | [github](https://github.com/anniesld)        |
-| maría fernanda lazón meza 📊             | ds      | [github](https://github.com/maffzz)          |
+| MARTÍN JESÚS BONILLA SARMIENTO 🧠        | CS      | [GITHUB](https://github.com/marbs23)         |
+| ANNEMARIE ALEJANDRA SALDARRIGA NÚÑEZ 💻 | CS      | [GITHUB](https://github.com/anniesld)        |
+| MARÍA FERNANDA LAZÓN MEZA 📊             | DS      | [GITHUB](https://github.com/maffzz)          |
