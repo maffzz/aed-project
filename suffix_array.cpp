@@ -124,8 +124,16 @@ public:
     // retorna la posición de la primera ocurrencia o -1 si no se encuentra
     int buscar(const char *patron) const {}
 
-    // imprime el suffix array
-    void imprimir() const {}
+    // Imprime el suffix array
+    void imprimir() const {
+        cout << "Suffix Array del texto: " << texto << "\n";
+        cout << "Índice\tSufijo\t\tPosición original\n";
+        
+        for (int i = 0; i < n; i++) {
+            int pos = sa[i];
+            cout << i << "\t" << (texto + pos) << "\t\t" << pos << "\n";
+        }
+    }
 
     // obtiene el arreglo de sufijos (para uso avanzado)
     const int* obtenerSuffixArray() const {
