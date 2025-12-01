@@ -40,7 +40,7 @@ el visualizador permite:
 
 la aplicación está desplegada en github pages:
 
-🔗 [ver en vivo](https://maffzz.github.io/aed-suffix-array/)
+🔗 [ver en vivo](maffzz.github.io/aed-project/)
 
 ## 🗂️ estructura del proyecto
 
