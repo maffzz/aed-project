@@ -150,7 +150,7 @@ public:
     // Imprime el suffix array
     void imprimir() const {
         cout << "Suffix Array del texto: " << texto << "\n";
-        cout << "Índice\tSufijo\t\tPosición original\n";
+        cout << "Indice\tSufijo\t\tPosicion original\n";
         
         for (int i = 0; i < n; i++) {
             int pos = sa[i];
@@ -167,13 +167,11 @@ public:
         return n; }
 };
 
-int main()
-{
-    int main() {
+  int main() {
     const char texto[] = "banana";
     const char patron[] = "ana";
 
-  
+
     SuffixArray sa(texto);
 
     sa.imprimir();
@@ -181,11 +179,9 @@ int main()
     int posicion = sa.buscar(patron);
 
     if (posicion != -1)
-        cout << "\nPatrón encontrado en posición: " << posicion << endl;
+        cout << "\nPatron encontrado en posicion: " << posicion << endl;
     else
         cout << "\nPatrón NO encontrado." << endl;
 
     return 0;
-}
-
 }
