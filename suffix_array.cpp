@@ -109,6 +109,9 @@ class SuffixArray {
         delete[] sufijos; }
 
 public:
+    SuffixArray(const SuffixArray&) = delete; // evitar duplicidad de punteros
+    SuffixArray& operator=(const SuffixArray&) = delete;
+
     // constructor
     SuffixArray(const char *txt) {
         texto = txt;
