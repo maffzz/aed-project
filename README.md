@@ -46,7 +46,7 @@ la aplicación está desplegada en github pages:
 
 ```
 .
-├── suffix_array.cpp    # implementación en c++
+├── suffix_array.cpp   # implementación en c++
 └── web/
     ├── index.html     # interfaz de usuario
     ├── style.css      # estilos
