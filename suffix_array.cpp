@@ -74,7 +74,7 @@ class SuffixArray {
     // partición para el quicksort
     static int particion(Suffix *arr, int inicio, int fin) {
         Suffix pivote = arr[fin];
-    int i = inicio - 1;
+        int i = inicio - 1;
 
     for (int j = inicio; j <= fin - 1; j++) {
         if (arr[j].comparar(pivote) <= 0) {
