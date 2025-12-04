@@ -10,6 +10,11 @@ permissions:
   pages: write
   id-token: write
 
+# Permite solo un despliegue concurrente
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,10 +25,10 @@ jobs:
       - name: 🔄 Configurar Pages
         uses: actions/configure-pages@v4
       
-      - name: 📦 Subir archivos web
+      - name: 📦 Subir archivos
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'web/'  # Aseguramos que la barra al final esté presente
+          path: './web'
 
   deploy:
     environment:
