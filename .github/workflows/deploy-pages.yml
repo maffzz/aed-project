@@ -20,10 +20,10 @@ jobs:
       - name: 🔄 Configurar Pages
         uses: actions/configure-pages@v4
       
-      - name: 📦 Subir archivos
+      - name: 📦 Subir archivos web
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './web'
+          path: 'web/'  # Aseguramos que la barra al final esté presente
 
   deploy:
     environment:
