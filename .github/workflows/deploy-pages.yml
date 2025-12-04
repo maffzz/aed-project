@@ -5,15 +5,16 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Permisos necesarios para el despliegue
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Permite solo un despliegue concurrente
+# Control de concurrencia
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: 'pages'
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -22,13 +23,21 @@ jobs:
       - name: 🛠️ Obtener código
         uses: actions/checkout@v4
       
-      - name: 🔄 Configurar Pages
+      - name: 🔍 Verificar contenido de la carpeta web
+        run: |
+          echo "Contenido de la carpeta web:"
+          ls -la web/
+      
+      - name: � Crear archivo .nojekyll
+        run: touch web/.nojekyll
+      
+      - name: �🔄 Configurar Pages
         uses: actions/configure-pages@v4
       
-      - name: 📦 Subir archivos
+      - name: 📦 Subir archivos de la carpeta web
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './web'
+          path: 'web/'  # Asegura que se suba el contenido de la carpeta
 
   deploy:
     environment:
